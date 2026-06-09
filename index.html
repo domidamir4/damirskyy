@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damir helper</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f5f5f7;color:#1d1d1f}
+nav{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);padding:15px 30px;display:flex;justify-content:space-between}
+nav a{text-decoration:none;color:#1d1d1f;margin:0 10px}
+.hero{text-align:center;padding:100px 20px;background:linear-gradient(to bottom,#fff,#eef3ff)}
+.hero h1{font-size:64px;margin:0}
+.hero p{max-width:700px;margin:auto;font-size:20px;color:#555}
+.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#0071e3;color:#fff;border-radius:999px;text-decoration:none}
+.section{max-width:1100px;margin:auto;padding:70px 20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:25px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.08)}
+footer{text-align:center;padding:30px;color:#666}
+button{padding:10px 16px;border:none;border-radius:999px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<nav>
+<div><b>Damirskyy</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#contact">Contact</a>
+<button onclick="toggleLang()">Қазақша</button>
+</div>
+</nav>
+
+<section class="hero">
+<h1 id="title">Artificial Helper</h1>
+<p id="subtitle">
+Artificial Helper — жаңа буындағы жасанды интеллект көмекшісі. Ол қызметкерлерге, студенттерге және ұйымдарға ақпарат табуға, құжаттармен жұмыс істеуге және күнделікті міндеттерді тиімді орындауға көмектеседі.
+</p>
+<section class="section">
+<div class="cards">
+
+<div class="card">
+<h2>50%</h2>
+<p>Жылдамырақ бейімделу</p>
+</div>
+
+<div class="card">
+<h2>24/7</h2>
+<p>AI қолдауы</p>
+</div>
+
+<div class="card">
+<h2>90%</h2>
+<p>Қағазбастылықты азайту</p>
+</div>
+
+<div class="card">
+<h2>1000+</h2>
+<p>Пайдаланушыны қолдау</p>
+</div>
+
+</div>
+</section>
+<a href="#features" class="btn">Бастау</a>
+</section>
+
+<section class="section" id="about">
+<h2 id="aboutTitle">Проект жайлы</h2>
+<p id="aboutText">Artificial Helper — жаңа буындағы жасанды интеллект көмекшісі. Ол қызметкерлерге, студенттерге және ұйымдарға ақпарат табуға, құжаттармен жұмыс істеуге және күнделікті міндеттерді тиімді орындауға көмектеседі.</p>
+</section>
+
+<section class="section" id="features">
+<h2 id="featureTitle">Функциялар</h2>
+<div class="cards">
+<div class="card">🤖 AI Assistant 24/7</div>
+<div class="card">🗺️ 3D Navigation</div>
+<div class="card">📄 Document Automation</div>
+<div class="card">📅 Smart Reminders</div>
+<div class="card">👨‍💼 Employee Profiles</div>
+<div class="card">📊 Analytics</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Контактные данные</h2>
+<p>
+Жоба туралы қосымша ақпарат алу немесе серіктестік ұсыныстар үшін бізбен байланысыңыз.
+</p>
+<input style="width:100%;padding:12px;margin:8px 0" placeholder="Аты-жөні">
+<input style="width:100%;padding:12px;margin:8px 0" placeholder="Email">
+<textarea style="width:100%;padding:12px;height:120px"></textarea>
+<button>Жіберу</button>
+</section>
+
+<footer>© 2026 Дамир лучше всех</footer>
+
+<script>
+let kz=false;
+function toggleLang(){
+kz=!kz;
+if(kz){
+document.getElementById('subtitle').innerText='Қызметкерлер мен ұйымдарға арналған жасанды интеллект көмекшісі.';
+document.getElementById('aboutTitle').innerText='Жоба туралы';
+document.getElementById('aboutText').innerText='Artificial Helper қызметкерлерге бейімделуге, ақпарат табуға және құжаттармен жұмыс істеуге көмектеседі.';
+document.querySelector('button').innerText='Русский';
+}else{
+document.getElementById('subtitle').innerText='AI-powered digital assistant for employees and organizations.';
+document.getElementById('aboutTitle').innerText='About Project';
+document.getElementById('aboutText').innerText='Artificial Helper helps employees adapt faster, find information, manage documents and improve productivity.';
+document.querySelector('button').innerText='Қазақша';
+}
+}
+</script>
+
+</body>
+</html>
